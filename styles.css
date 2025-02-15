@@ -155,10 +155,6 @@
   text-align: center;
 }
 
-.answer-button:hover {
-  background-color: #eceae1;
-}
-
 
 /* ปรับ container หลักของเกม */
 #game-container {
