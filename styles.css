@@ -154,6 +154,9 @@
   transition: 0.3s;
   text-align: center;
 }
+.answer-button:hover {
+  background-color: #f3f2ec;
+}
 
 
 /* ปรับ container หลักของเกม */
