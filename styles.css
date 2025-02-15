@@ -1,0 +1,179 @@
+/* ปรับ container ของผลลัพธ์ */
+#result-container {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  margin-bottom: 50px; /* เว้นระยะห่างจาก footer */
+  text-align: center;
+}
+
+/* ปรับขนาดรูปภาพให้ Responsive และอยู่ในกรอบ */
+#result-image {
+  width: 50%;         /* ปรับให้รูปเต็ม container */
+  min-width: 320px;
+  min-height: 320px;
+  max-width: 400px;
+  max-height: 400px;    /* กำหนดขนาดสูงสุด */
+  height: auto;        /* ให้ปรับสัดส่วนอัตโนมัติ */
+  border-radius: 10px; /* มุมโค้งมน */
+  object-fit: cover;   /* ให้รูปอยู่ในกรอบอย่างเหมาะสม */
+  display: block;
+  margin: 0 auto 20px; /* จัดให้อยู่ตรงกลาง และเพิ่มระยะห่างด้านล่าง */
+}
+
+#result-text {
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#result-description {
+    font-size: 18px;
+    color: #555;
+    margin: 15px 0;
+}
+
+
+/* CSS */
+.button-74 {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-74:hover {
+    background-color: #fff;
+  }
+  
+  .button-74:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+  
+  @media (min-width: 368px) {
+    .button-74 {
+      min-width: 320px;
+      padding: 0 25px;
+    }
+  }
+  
+  .box {
+    width: 550px;
+    height: 550px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px rgba(218,102,123,1),
+8px 8px 0px 0px rgba(218,102,123,1);
+  }
+
+
+  .flex-container {
+    display: flex;
+    justify-content: center; /* จัดให้อยู่กึ่งกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    height: 100vh; /* ให้สูงเต็มหน้าจอ */
+}
+
+  .flex-box {
+    width: 100px; /* ปรับขนาดตามหน้าจอ */
+    height: 550px;
+    max-width: 600px; /* จำกัดขนาดสูงสุด */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    text-align: center;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px rgba(218,102,123,1),
+    8px 8px 0px 0px rgba(218,102,123,1);
+}
+
+
+  .image-container {
+  width: 100%;
+  max-width: 500%;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+  img {
+  width: 100%;
+  height: auto;
+  min-width: 600px;
+  min-height: 600px;
+  max-width: 800px;
+  max-height: 800px;
+  object-fit: cover;
+}
+
+  @media (max-width: 600px) {
+  img {
+    min-width: 300px;
+    min-height: 300px;
+  }
+}
+
+/* ปรับ container ของปุ่ม */
+#answer-buttons {
+  display: flex;
+  flex-direction: column;  /* จัดให้ปุ่มเรียงกันคนละบรรทัด */
+  align-items: center;     /* จัดให้อยู่ตรงกลาง */
+  gap: 10px;               /* เพิ่มระยะห่างระหว่างปุ่ม */
+  margin-top: 20px;
+}
+
+/* ปรับแต่งปุ่ม */
+.answer-button {
+  width: 200px;            /* กำหนดความกว้างของปุ่ม */
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #78756b;
+  color: white;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.answer-button:hover {
+  background-color: #eceae1;
+}
+
+
+/* ปรับ container หลักของเกม */
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;  /* ให้เต็มจอ */
+  padding: 20px 0;  /* เพิ่มระยะห่างด้านบนและล่าง */
+}
+
+/* ปรับรูปภาพคำถาม */
+#question-image {
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-bottom: 10px; /* เว้นระยะห่างจากปุ่ม */
+}

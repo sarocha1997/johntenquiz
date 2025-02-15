@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOHNTEN Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+s
+    <style>
+        body {
+        background-color: rgb(235, 216, 192);
+      }
+      * {
+            font-family: 'Prompt', sans-serif;
+        }
+    </style>
+   
+
+</head>
+<body>
+
+        <div id="result-container">
+            <img id="result-image" src="images/result1.jpg" alt="ผลลัพธ์">
+            <h3 id="score-text">คะแนนรวม: 0</h3>
+            <p id="result-description">รายละเอียดผลลัพธ์ของคุณ...</p>
+            <button class="button-74" onclick="restartGame()">เล่นอีกครั้ง</button>
+        </div>
+
+        <footer class="text-secondary px-5 py-2 text-center" style="background-color: rgb(94, 82, 68);">
+            <p class="text-center text-white">JOHNTEN Quiz by <a href="https://x.com/ssaroser19" class="text-white">@Ssaroser19</a></p>
+        </footer>
+        
+
+    <script>
+        function getResultLevel(score) {
+            if (score <= 5) {
+                return { level: "เลเวล 1", image: "images/ans1.png", description:    "<b>คุณคือนักสำรวจ</b> ที่ชอบเรียนรู้สิ่งใหม่ ๆ<br>" +
+                                                                                    " และใช่!!! คุณคือนักสำรวจที่ค้นพบ<br>" + 
+                                                                                    "ซากเรือโบราณที่มีค่าที่สุดในประวัติศาสตร์!<br>" + 
+                                                                                    "ถึงจะเจอแค่เศษซากแต่เรื่องราวความยิ่งใหญ่<br> " + 
+                                                                                    "ของเรือ “จอห์นเตนล์” ยิ่งใหญ่มาก<br>" +
+                                                                                    "จนแอตแลนติสยังยอมแพ้!!!<br>"+
+                                                                                    "แล้วคุณนักสำรวจรออะไรอยู่คะ <br>" + 
+                                                                                    "มาเป็น<b>ชิปเปอร์จอห์นแตนล์</b>กับเราสิคะ <br>" + 
+                                                                                    "มาค่ะ มาศึกษาประวัติศาสตร์ไปด้วยกัน<br>" +
+                                                                                    "มาน้อยแต่อร่อยแน่!" };
+            } else if (score <= 10) {
+                return { level: "เลเวล 2", image: "images/ans2.png", description:   "<b>คุณคือนักชิมตัวยง</b><br>" +
+                                                                                    "คุณค่อนข้างที่จะศึกษาโมเมนต์จอห์นเตนล์มาพอสมควร<br>"+
+                                                                                    "แสดงว่าคุณถือคติ มีชีวิตอยู่เพื่อของอร่อย<br>"+
+                                                                                    "อะไรอร่อยเราก็ต้องกิน อย่างเช่น <br>"+
+                                                                                    "จอห์นเตนล์ชิมอย่างไงก็อร่อย!!! <br>"+
+                                                                                    "ของดี ของอร่อ  ที่นักชิมอย่างเรา<br>"+
+                                                                                    "ไม่ต้องทำอะไรรอกัปตันเสิร์ฟอย่างเดียว<br>"+
+                                                                                    "เพราะโมเมนต์มาเสิร์ฟทีฟินจนแทบลืมหายใจ <br>"+
+                                                                                    "<b>จอห์นเตนล์</b> เรียกได้ว่าเป็นของดี<br>"+
+                                                                                    "ที่ไม่ควรพลาดด้วยประการทั้งปวง" };
+            } else {
+                return { level: "เลเวล 3", image: "images/ans3.png", description:    "<b>คุณคือศาสตราจารย์</b><br>"+
+                                                                                    "ผู้มีความเชี่ยวชาญในศาสตร์ของ “จอห์นเตนล์”<br> "+
+                                                                                    "ถามอะไรเกี่ยวกับ “จอห์นเตนล์” คุณสามารถตอบได้หมด<br>"+
+                                                                                    "ถ้าการศึกษาศาสตร์แห่ง “จอห์นเตนล์” <br>เป็นสาขาวิชาจริง ๆ ล่ะก็<br>"+
+                                                                                    "คุณคงเป็นศาสตราจารย์ระดับตำนาน<br>"+
+                                                                                    "ที่มีหอสมุดส่วนตัวเก็บทุกข้อมูล ทุกโมเมนต์<br> "+
+                                                                                    "และทุกทฤษฎีสมคบคิดเกี่ยวกับ “จอห์นเตนล์”"+
+                                                                                    ""+
+                                                                                    ""+
+                                                                                    ""};
+            }
+        }
+
+        // ดึงคะแนนจาก localStorage
+        let score = localStorage.getItem("totalScore");
+        if (score === null) score = 0;
+        score = parseInt(score);
+
+        let result = getResultLevel(score);
+        document.getElementById("result-image").src = result.image;
+        //document.getElementById("result-text").textContent = "ผลลัพธ์ของคุณ: " + result.level;
+        document.getElementById("score-text").textContent = "คะแนนรวม: " + score + " / 15";
+        document.getElementById("result-description").innerHTML = result.description;
+
+        function restartGame() {
+            localStorage.removeItem("totalScore");
+            window.location.href = "index.html";
+        }
+    </script>
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
