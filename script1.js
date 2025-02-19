@@ -83,7 +83,7 @@ const questions = [
     { 
         image: "images/q10.png", 
         answers: [
-            { text: "I wanna have xxx with u ___ fat ass! Love you forever darling ^^", score: 0 },
+            { text: "I wanna have xxx with u ___ fat ass Love you forever darling ^^", score: 0 },
             { text: "I wanna have xxxx with u ___ fat ass!!!! Love you forever darling ^^", score: 1 },
             { text: "I wanna have xxx with u ___ fat aas!! Love you forever darling ^^", score: 0 },
             { text: "I wanna have xx with u ___ fat ass! Love you forever darllng ^^", score: 0 }
