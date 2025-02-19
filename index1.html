@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
 
     <style>
+
         * {
             font-family: 'Prompt', sans-serif;
         }
@@ -21,15 +22,17 @@
             <div class="container text-white text-center">
                 
                 <div class="container px-5">
-                        <div id="game-container">
-                            <img id="question-image" src="images/start.jpg" alt="รูปภาพคำถาม">
-                            <div id="answer-buttons"></div> <!-- ปุ่มตัวเลือก -->
-                            <button id="next-button" onclick="nextQuestion()">ถัดไป</button>
+                    <div id="game-container">
+                    <div class="quiz-container">
+                        <img id="question-image" src="images/start.jpg" alt="คำถาม">
+                        <div id="answer-buttons" class="button-container"></div>
+                        <div class="next-button-container">
+                            <button id="next-button" class="next-button">ถัดไป</button>
                         </div>
-
+                    </div>
+                    </div>
     
             </div>
-        
         </div>
         </div>
     
@@ -40,6 +43,6 @@
     <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
-    <script src="script.js"></script>
+    <script src="script1.js"></script>
 </body>
 </html>
