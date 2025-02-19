@@ -133,6 +133,51 @@ const questions = [
             { text: "รูปที่ 1 , 3 ", score: 0 },
             { text: "ผิดทุกข้อ", score: 0 }
         ]
+    },
+    { 
+        image: "images/q16.png", 
+        answers: [
+            { text: "รูปที่ 1 ", score: 1 },
+            { text: "รูปที่ 2 ", score: 0 },
+            { text: "รูปที่ 3 ", score: 0 },
+            { text: "ผิดทุกข้อ", score: 0 }
+        ]
+    },
+    { 
+        image: "images/q17.png", 
+        answers: [
+            { text: "รูปที่ 1 ", score: 0 },
+            { text: "รูปที่ 2 ", score: 0 },
+            { text: "รูปที่ 3 ", score: 1 },
+            { text: "ผิดทุกข้อ", score: 0 }
+        ]
+    },
+    { 
+        image: "images/q18.png", 
+        answers: [
+            { text: "KBS Gayo Daechukje 2018", score: 1 },
+            { text: "KBS Gayo Daechukje 2019", score: 0 },
+            { text: "SBS Gayo Daejeon 2018", score: 0 },
+            { text: "SBS Gayo Daejeon 2019", score: 0 }
+        ]
+    },
+    { 
+        image: "images/q19.png", 
+        answers: [
+            { text: "กรุงเทพ / 2017 ", score: 0 },
+            { text: "เชียงใหม่ / 2017 ", score: 1 },
+            { text: "โซล / 2017 ", score: 0 },
+            { text: "ชิคาโก / 2017", score: 0 }
+        ]
+    },
+    { 
+        image: "images/q20.png", 
+        answers: [
+            { text: "SBS Gayo Daejeon 2021", score: 0 },
+            { text: "SBS Gayo Daejeon 2022", score: 0 },
+            { text: "SBS Gayo Daejeon 2023", score: 1 },
+            { text: "SBS Gayo Daejeon 2024", score: 0 }
+        ]
     }
 ];
 
