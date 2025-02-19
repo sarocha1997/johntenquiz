@@ -36,7 +36,7 @@
 
     <script>
         function getResultLevel(score) {
-            if (score <= 5) {
+            if (score <= 7) {
                 return { level: "เลเวล 1", image: "images/ans1.png", description:    "<b>คุณคือนักสำรวจ</b> ที่ชอบเรียนรู้สิ่งใหม่ ๆ<br>" +
                                                                                     " และใช่!!! คุณคือนักสำรวจที่ค้นพบ<br>" + 
                                                                                     "ซากเรือโบราณที่มีค่าที่สุดในประวัติศาสตร์!<br>" + 
@@ -47,7 +47,7 @@
                                                                                     "มาเป็น<b>ชิปเปอร์จอห์นแตนล์</b>กับเราสิคะ <br>" + 
                                                                                     "มาค่ะ มาศึกษาประวัติศาสตร์ไปด้วยกัน<br>" +
                                                                                     "มาน้อยแต่อร่อยแน่!" };
-            } else if (score <= 10) {
+            } else if (score <= 14) {
                 return { level: "เลเวล 2", image: "images/ans2.png", description:   "<b>คุณคือนักชิมตัวยง</b><br>" +
                                                                                     "คุณค่อนข้างที่จะศึกษาโมเมนต์จอห์นเตนล์มาพอสมควร<br>"+
                                                                                     "แสดงว่าคุณถือคติ มีชีวิตอยู่เพื่อของอร่อย<br>"+
@@ -81,7 +81,7 @@
         let result = getResultLevel(score);
         document.getElementById("result-image").src = result.image;
         //document.getElementById("result-text").textContent = "ผลลัพธ์ของคุณ: " + result.level;
-        document.getElementById("score-text").textContent = "คะแนนรวม: " + score + " / 15";
+        document.getElementById("score-text").textContent = "คะแนนรวม: " + score + " / 20";
         document.getElementById("result-description").innerHTML = result.description;
 
         function restartGame() {
